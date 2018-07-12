@@ -1,0 +1,155 @@
+<app-navbar></app-navbar>
+
+<br>
+
+<h2>Métodos de Instalação</h2>
+
+<br>
+
+<!--Accordion wrapper-->
+<div class="accordion" id="accordionEx1" role="tablist" aria-multiselectable="true">
+
+  <!-- Accordion card -->
+<div class="card">
+   
+  <!-- Card header -->
+   <div class="card-header" role="tab" id="headingOne">
+      <a data-toggle="collapse" data-parent="#accordionEx1" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+         <h5 class="mb-0">
+            Instalação via CDN<i class="fa fa-angle-down rotate-icon"></i>
+         </h5>
+      </a>
+   </div>
+   
+   <!-- Card body -->
+   <div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordionEx">
+      <div class="card-body">
+
+        <p>Para incluir Bootstrap em seu projeto, precisamos adicionar dois arquivos:</p>
+        <ul>
+          <li>Bootstrap</li>
+          <li>Bootstrap JavaScript</li>
+        </ul>
+        
+        <p>
+          A parte JavaScript do Bootstrap são dependentes do JQuery. Então precisamos do arquivo da biblioteca JQuerry JavaScript também.
+          <br> Todos esses arquivos que serão incluidos no seu projeto podem ser diretamente baixados de um CDN (Content Delivery Network, ou Rede de Entrega de Conteúdo traduzido literalmente).
+        </p>
+          
+        <ul>
+          <a href="https://code.jquery.com/">https://code.jquery.com/</a>
+          <br>
+          <a href="http://getbootstrap.com/getting-started/">http://getbootstrap.com/getting-started/</a>
+          <br>
+          <a href="https://www.bootstrapcdn.com">https://www.bootstrapcdn.com</a>
+        </ul>
+
+        Abra o arquivo src/index.html e insira:
+        <ul>
+          <li>
+            O  elemento Link no topo do header para incluir o arquivo CSS do Bootstrap
+          </li>
+          <li>
+            O elemento script para incluir o JQuery no fundo do corpo de texto (o elemento body)
+          </li>
+          <li>
+            O elemento script  para incluir o arquivo do JavaScript do Bootstrap no fundo do corpo de texto (o elemento body)
+          </li>
+        </ul>
+
+        Agora o seu index.html deverá se paracer com o seguinte código:
+        <p></p>
+        <div class="container">
+          <pre name="0b30" id="0b30" class="">&lt;!doctype html&gt;<br>&lt;html&gt;<br>&lt;head&gt;<br>  &lt;meta charset="utf-8"&gt;<br>  &lt;title&gt;Angular Bootstrap Demo&lt;/title&gt;<br>  &lt;base href="/"&gt;&lt;meta name="viewport" content="width=device-width, initial-scale=1"&gt;<br>  &lt;link rel="icon" type="image/x-icon" href="favicon.ico"&gt;<br>  &lt;link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"&gt;<br>&lt;/head&gt;<br>&lt;body&gt;<br>  &lt;app-root&gt;Loading...&lt;/app-root&gt;<br>  &lt;script src="https://code.jquery.com/jquery-3.1.1.min.js" integrity="sha256-hVVnYaiADRTO2PzUGmuLJr8BLUSjGIZsDYGmIJLv2b8=" crossorigin="anonymous"&gt;&lt;/script&gt;<br>  &lt;script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"&gt;&lt;/script&gt;<br>&lt;/body&gt;<br>&lt;/html&gt;</pre>
+        </div>
+      </div>
+   </div>
+  </div>
+
+  <!--Accordion wrapper-->
+  <div class="accordion" id="accordionEx2" role="tablist" aria-multiselectable="true">
+
+    <!-- Accordion card -->
+    <div class="card">
+
+      <!-- Card header -->
+      <div class="card-header" role="tab" id="headingTwo">
+          <a data-toggle="collapse" data-parent="#accordionEx2" href="#collapseTwo" aria-expanded="true" aria-controls="collapseOne">
+            <h5 class="mb-0">
+                Instalação via NPM<i class="fa fa-angle-down rotate-icon"></i>
+            </h5>
+          </a>
+      </div>
+
+      <!-- Card body -->
+      <div id="collapseTwo" class="collapse" role="tabpanel" aria-labelledby="headingTwo" data-parent="#accordionEx2">
+          <div class="card-body">
+              Outra maneira de adicionar o Bootstrap em seu projeto Angular é instalando na pasta do seu projeto usando NPM
+
+              <code class="markup--code markup--p-code">$ npm install bootstrap --save</code>
+              
+              <code class="markup--code markup--p-code">$ npm install jquery --save</code>
+              
+              <p>Isso instala o Bootstrap e o jQuery na pasta node_modules dentro do diretório do projeto e garante que ambas as dependências também sejam adicionadas ao arquivo package.json.</p>
+              
+              <p>Após ambos os pacotes terem sido instalados com sucesso, os arquivos jQuery e Bootstrap podem ser encontrados em:</p>
+              
+              <li>node_modules/jquery/dist/jquery.min.js</li>
+              <li>node_modules/bootstrap/dist/css/bootstrap.min.css</li>
+              <li>node_modules/bootstrap/dist/js/bootstrap.min.js</li>
+              
+              <p>Para adicionar esses arquivos ao projeto, você pode tanto:</p>
+              
+              <p>adicionar os elementos link e script correspondentes ao index.html, como fizemos antes, ou adicionando os caminhos dos arquivos no array de "styles" e "scripts" no arquivo .angular-cli.json:</p>
+              
+              <pre name="1fc1" id="1fc1" class="graf graf--pre graf-after--li">"styles": [<br>    "styles.css",<br>    "../node_modules/bootstrap/dist/css/bootstrap.min.css"<br>  ],<br>  "scripts": [<br>    "../node_modules/jquery/dist/jquery.min.js",<br>    "../node_modules/bootstrap/dist/js/bootstrap.min.js"<br>  ],</pre>
+          </div>
+      </div>
+    </div>
+  </div>
+
+  <!--Accordion wrapper-->
+  <div class="accordion" id="accordionEx3" role="tablist" aria-multiselectable="true">
+
+      <!-- Accordion card -->
+      <div class="card">
+  
+        <!-- Card header -->
+        <div class="card-header" role="tab" id="headingThree">
+            <a data-toggle="collapse" data-parent="#accordionEx3" href="#collapseThree" aria-expanded="true" aria-controls="collapseThree">
+              <h5 class="mb-0">
+                  Instalação do NG-Bootstrap<i class="fa fa-angle-down rotate-icon"></i>
+              </h5>
+            </a>
+        </div>
+  
+        <!-- Card body -->
+        <div id="collapseThree" class="collapse" role="tabpanel" aria-labelledby="headingThree" data-parent="#accordionEx3">
+            <div class="card-body">
+                <p>O Ng-Bootstrap é baseado no Bootstrap 4 e pode ser adicionado ao seu projeto Angular da seguinte maneira.</p>
+                
+                <p>O Ng-Bootstrap está disponível como um pacote NPM, portanto, a instalação pode ser feita usando o seguinte comando no diretório do projeto:</p>
+              
+                <code class="markup--code markup--p-code">npm install --save @ng-bootstrap/ng-bootstrap</code>
+                <p></p>
+                
+                <p>Além disso, o Ng-Bootstrap exigia que o Bootstrap 4 fosse adicionado ao nosso projeto. Instale via:</p>
+        
+                <code class="markup--code markup--p-code">$ npm install bootstrap@4.0.0-alpha.6</code>
+                <p></p>
+                
+                <p>Agora adicione bootstrap.min.css, jquery.min.js e bootstrap.min.js ao arquivo .angular-cli.json, como fizemos antes.</p>
+        
+                <p>Uma vez instalado, você precisa importar o módulo principal do Ng-Bootstrap, NgbModule, do pacote @ng-bootstrap/ng-bootstrap. Adicione a seguinte instrução de importação para app.module.ts:</p>
+        
+                <p>import &#123;NgbModule&#125; from '@ng-bootstrap/ng-bootstrap';</p>
+        
+                <p>Em seguida, precisamos adicionar este módulo à matriz de importações do decorador @NgModule. Se você quiser importar o NgbModule no seu módulo raiz (por exemplo, AppModule), precisará chamar o método factory forRoot(), como você pode ver a seguir:</p>
+        
+                <pre>&#64;NgModule(&#123;<br>    declarations: [AppComponent, ...],<br>    imports: [NgbModule.forRoot(), ...],<br>    bootstrap: [AppComponent]<br>&#125;)<br>export class AppModule &#123;<br>&#125;
+                </pre>
+            </div>
+        </div>
+      </div>
+    </div>
+</div>
